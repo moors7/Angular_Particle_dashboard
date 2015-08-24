@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Angular Material - Starter App</title>
+
+    <!--<base href="/">-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/\animate.min.css">
+
+    <link rel="stylesheet" href="assets/app.css"/>
+</head>
+
+<body ng-app="myApp" layout="row" layout-fill ng-controller="mainController as ul">
+
+    <!-- Sidebar menu -->
+    <md-sidenav layout="column" class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="($mdMedia('gt-sm') && $state.current.name != 'devices') || $mdMedia('gt-md')">
+
+        <md-toolbar class="md-whiteframe-z1">
+            <h1>menu</h1>
+        </md-toolbar>
+
+        <md-content>
+            <md-list>
+
+                <md-list-item>
+                    <md-button ng-click="ul.toggleMenu('left')" ui-sref="home.welcome" ng-class="{'selected' : it === ul.selected }">
+                        home
+                    </md-button>
+                </md-list-item>
+
+                <md-list-item>
+                    <md-button ng-click="ul.toggleMenu('left')" ui-sref="home.settings" ng-class="{'selected' : it === ul.selected }">
+                        Settings
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button ng-click="ul.toggleMenu('left')" ui-sref="devices" ng-class="{'selected' : it === ul.selected }">
+                        Devices
+                    </md-button>
+                </md-list-item>
+            </md-list>
+        </md-content>
+
+
+    </md-sidenav>
+
+
+
+
+    <md-content flex layout="column" style="overflow: hidden" ui-view>
+
+    </md-content>
+
+
+
+
+<script src="./bower_components/angular/angular.js"></script>
+<script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="./bower_components/angular-animate/angular-animate.js"></script>
+<script src="./bower_components/angular-aria/angular-aria.js"></script>
+
+<script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
+
+<script src="./src/users/Users.js"></script>
+<script src="src/users/app.js"></script>
+<script src="./src/users/UserService.js"></script>
+<script src="./src/users/app.routes.js"></script>
+
+
+</body>
+</html>

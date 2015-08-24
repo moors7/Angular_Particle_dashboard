@@ -1,0 +1,14 @@
+
+
+
+    <md-toolbar md-scroll-shrink layout="row" layout-fill-sm class="md-whiteframe-z2">
+        <h1 layout-align="center">{{$state.current.givenName}}</h1>
+
+        <md-button class="menu" hide-gt-sm ng-click="ul.toggleMenu('left')" aria-label="Show User List">
+            <md-icon md-svg-icon="menu" ></md-icon>
+        </md-button>
+    </md-toolbar>
+
+    <md-content flex style="padding: 20px" ui-view>
+
+    </md-content>
