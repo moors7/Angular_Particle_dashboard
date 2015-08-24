@@ -4,7 +4,9 @@
     <md-sidenav class="site-sidenav md-sidenav-user md-whiteframe-z2" md-component-id="deviceMenu" md-is-locked-open="$mdMedia('gt-sm')" layout-fill="$mdMedia('sm')" layout="column" style="overflow: hidden">
 
         <md-toolbar class="md-whiteframe-z1">
-            <h1>Devices</h1>
+            <div class="md-toolbar-tools">
+                <h1>Devices</h1>
+            </div>
         </md-toolbar>
 
         <md-content>
@@ -38,16 +40,18 @@
     <div layout="column" layout-fill style="overflow: hidden">
 
         <md-toolbar md-scroll-shrink layout="row" layout-fill-sm class="md-whiteframe-z2">
-            <md-button class="menu" hide-gt-sm ng-click="ul.toggleMenu('deviceMenu')" aria-label="Show User List">
-                <md-icon md-svg-icon="backburger" ></md-icon>
-                Devices
-            </md-button>
-
-            <h1 layout-align="center">{{ul.selected.name}}</h1>
-
-            <md-button class="menu" hide-gt-md ng-click="ul.toggleMenu('left')" aria-label="Show User List">
-                <md-icon md-svg-icon="menu" ></md-icon>
-            </md-button>
+            <div class="md-toolbar-tools">
+                <md-button class="menu" hide-gt-sm ng-click="ul.toggleMenu('deviceMenu')" aria-label="Show User List">
+                    <md-icon md-svg-icon="backburger" ></md-icon>
+                    Devices
+                </md-button>
+                <span flex></span>
+                <h1 layout-align="center">{{ul.selected.name}}</h1>
+                <span flex></span>
+                <md-button class="menu" hide-gt-md ng-click="ul.toggleMenu('left')" aria-label="Show User List">
+                    <md-icon md-svg-icon="menu" ></md-icon>
+                </md-button>
+            </div>
         </md-toolbar>
 
         <md-content flex style="padding: 20px">
