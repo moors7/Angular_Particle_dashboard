@@ -141,17 +141,17 @@ span.name {
 
 /* ANIMATIONS */
 
-.ng-enter, .ng-leave { width:100%; position:absolute; }
-.ng-enter {
-  -webkit-animation:zoomInUp 0.5s both ease-in;
-  -moz-animation:zoomInUp 0.5s both ease-in;
-  animation: zoomInUp 0.5s both ease-in;
-}
-.ng-leave {
- -webkit-animation:zoomOutDown 0.5s both ease-in;
- -moz-animation:zoomOutDown 0.5s both ease-in;
- animation:zoomOutDown 0.5s both ease-in;
-}
+/*.ng-enter, .ng-leave { width:100%; position:absolute; }*/
+/*.ng-enter {*/
+  /*-webkit-animation:zoomInUp 0.5s both ease-in;*/
+  /*-moz-animation:zoomInUp 0.5s both ease-in;*/
+  /*animation: zoomInUp 0.5s both ease-in;*/
+/*}*/
+/*.ng-leave {*/
+ /*-webkit-animation:zoomOutDown 0.5s both ease-in;*/
+ /*-moz-animation:zoomOutDown 0.5s both ease-in;*/
+ /*animation:zoomOutDown 0.5s both ease-in;*/
+/*}*/
 
 
 
