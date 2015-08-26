@@ -1,16 +1,29 @@
 <md-bottom-sheet class="md-list md-has-header">
 
-    <md-subheader>
-        Contact <span class="name">{{ cp.user.name }}</span>:
-    </md-subheader>
+
+    <h4>Please fill in your credentials to log in to the Particle Cloud.</h4>
+
 
     <md-list>
-      <md-item ng-repeat="item in cp.actions">
-        <md-button ng-click="cp.submitContact(item)" id="item_{{$index}}">
-            <md-icon md-svg-icon="{{ item.icon_url }}"></md-icon>
-            {{item.name}}
-        </md-button>
-      </md-item>
+        <form ng-submit="login()">
+            <md-input-container flex>
+                <label>Email</label>
+                <input ng-model="mail" type="email">
+            </md-input-container>
+
+            <md-input-container flex>
+                <label>Password</label>
+                <input ng-model="password" type="password">
+            </md-input-container>
+
+
+            <button ng-click="login()" class="md-button-primary">Login</button>
+
+        </form>
     </md-list>
+
+    {{mail}}
+    <br>
+    {{password}}
 
 </md-bottom-sheet>

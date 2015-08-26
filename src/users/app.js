@@ -76,7 +76,7 @@ angular.module('myApp', ['ngMaterial', 'users', 'ui.router', 'routerRoutes', 'ng
                 var user = self.selected;
 
                 return $mdBottomSheet.show({
-                    parent: angular.element(document.getElementById('content')),
+                    parent: angular.element(document.getElementById('sideNav')),
                     templateUrl: './src/users/view/contactSheet.html',
                     controller: [ '$mdBottomSheet', ContactPanelController],
                     controllerAs: "cp",
@@ -90,6 +90,17 @@ angular.module('myApp', ['ngMaterial', 'users', 'ui.router', 'routerRoutes', 'ng
                  * Bottom Sheet controller for the Avatar Actions
                  */
                 function ContactPanelController( $mdBottomSheet ) {
+                    this.email;
+                    this.password;
+                    
+                    this.Login = function(){
+                        console.log("fuck yeah");
+                        console.log(this.email);
+                        console.log(password);
+
+                        spark.login({username: this.email , password: this.password}, callback);
+                    }
+
                     this.user = user;
                     this.actions = [
                         { name: 'Phone'       , icon: 'phone'       , icon_url: 'assets/svg/phone.svg'},
@@ -112,6 +123,12 @@ angular.module('myApp', ['ngMaterial', 'users', 'ui.router', 'routerRoutes', 'ng
             $rootScope.$stateParams = $stateParams;
         }
     ]);
+
+
+
+var callback = function(err, body) {
+    console.log('API call login completed on callback:', body);
+};
 
 
 
